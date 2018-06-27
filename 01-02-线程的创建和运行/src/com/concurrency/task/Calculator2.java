@@ -1,12 +1,12 @@
 package com.concurrency.task;
 
 // 创建一个名为Calculator的类，它实现了 Runnable接口
-public class Calculator implements Runnable {
+public class Calculator2 implements Runnable {
     // 声明一个名为number的私有（private) int属性
     private int number;
 
     // 编写这个类的一个构造器，用来为属性number设置值。
-    public Calculator(int number) {
+    public Calculator2(int number) {
         this.number = number;
     }
 

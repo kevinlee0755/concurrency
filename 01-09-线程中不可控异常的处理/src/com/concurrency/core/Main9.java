@@ -3,7 +3,7 @@ package com.concurrency.core;
 import com.concurrency.handler.ExceptionHandler;
 import com.concurrency.task.Task;
 
-public class Main {
+public class Main9 {
     public static void main(String[] args) {
         Task task = new Task(); // 创建一个任务
         Thread thread = new Thread(task); // 创建一个线程

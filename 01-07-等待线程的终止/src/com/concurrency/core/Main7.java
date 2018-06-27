@@ -5,7 +5,7 @@ import com.concurrency.task.NetworkConnectionsLoader;
 
 import java.util.Date;
 
-public class Main {
+public class Main7 {
     public static void main(String[] args) {
         // 创建并启动数据源加载器
         DataSourcesLoader dsLoader = new DataSourcesLoader();

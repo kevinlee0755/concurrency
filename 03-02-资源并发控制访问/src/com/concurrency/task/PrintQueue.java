@@ -1,6 +1,6 @@
 package com.concurrency.task;
 
-import com.concurrency.core.Main;
+import com.concurrency.core.Main3;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;

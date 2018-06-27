@@ -27,7 +27,15 @@ public class FileSearch implements Runnable {
 
     @Override
     public void run() {
-
+    	while(true){
+    		if (Thread.interrupted()) {  // 程序被中断就抛出异常
+                try {
+					throw new InterruptedException();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+            }
+    	}
     }
 
     /**

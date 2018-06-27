@@ -3,7 +3,7 @@ package com.concurrency.core;
 import com.concurrency.task.FileClock;
 
 import java.util.concurrent.TimeUnit;
-public class Main {
+public class Main6 {
     public static void main(String[] args) {
         // 创建一个文件时间运行对象，并且将其放入一个线程对象中
         FileClock clock = new FileClock();

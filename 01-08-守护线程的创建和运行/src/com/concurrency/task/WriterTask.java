@@ -4,6 +4,7 @@ import com.concurrency.event.Event;
 
 import java.util.Date;
 import java.util.Deque;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -26,12 +27,13 @@ public class WriterTask implements Runnable {
 
     @Override
     public void run() {
+    	System.out.println("running write");
         // 产生100个事件对象
-        for (int i = 1; i < 100; i++) {
+        for (int i = 1; i < 2; i++) {
             // 创建和初始化事件对象
             Event event = new Event();
             event.setDate(new Date());
-            event.setEvent(String.format("The thread %s has generated an event", Thread.currentThread().getId()));
+            event.setEvent(String.format("%s event"+new Random().nextInt(), Thread.currentThread().getName()));
 
             // 将事件添加对队列头部
             deque.addFirst(event);
@@ -42,5 +44,6 @@ public class WriterTask implements Runnable {
                 e.printStackTrace();
             }
         }
+        System.out.println("running end");
     }
 }

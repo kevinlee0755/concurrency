@@ -14,7 +14,7 @@ public class NetworkConnectionsLoader implements Runnable {
 
         // 休眠6s
         try {
-            TimeUnit.SECONDS.sleep(6);
+            TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

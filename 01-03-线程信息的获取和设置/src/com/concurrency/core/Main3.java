@@ -1,6 +1,6 @@
 package com.concurrency.core;
 
-import com.concurrency.task.Calculator;
+import com.concurrency.task.Calculator3;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URLDecoder;
 
-public class Main {
+public class Main3 {
     public static void main(String[] args) {
 
         // 线程优先级信息
@@ -23,7 +23,7 @@ public class Main {
         threads = new Thread[10];
         status = new Thread.State[10];
         for (int i = 0; i < 10; i++) {
-            threads[i] = new Thread(new Calculator(i));
+            threads[i] = new Thread(new Calculator3(i));
             if (i % 2 == 0) {
                 threads[i].setPriority(Thread.MAX_PRIORITY);
             } else {
@@ -36,7 +36,7 @@ public class Main {
         PrintWriter pw = null;
         try {
             // 获取项目运行的根路径
-            String configFile = Main.class.getClassLoader().getResource("").getPath();
+            String configFile = Main3.class.getClassLoader().getResource("").getPath();
             configFile = URLDecoder.decode(configFile, "utf-8");
 
             System.out.println(configFile);
@@ -55,7 +55,7 @@ public class Main {
             pw = new PrintWriter(file);
 
             for (int i = 0; i < 10; i++) {
-                pw.println("Main : Status of Thread " + i + " : " + threads[i].getState());
+                System.out.println("Main : Status of Thread " + i + " : " + threads[i].getState());
                 status[i] = threads[i].getState();
             }
 
@@ -96,11 +96,11 @@ public class Main {
      * @param state  线程的前一个状态
      */
     private static void writeThreadInfo(PrintWriter pw, Thread thread, Thread.State state) {
-        pw.printf("Main : Id %d ---- %s\n", thread.getId(), thread.getName());
-        pw.printf("Main : Priority:  %d\n", thread.getPriority());
-        pw.printf("Main : Old State: %s\n", state);
-        pw.printf("Main : New State: %s\n", thread.getState());
-        pw.printf("Main : ************************************\n");
-
+//        pw.printf("Main : Id %d ---- %s\n", thread.getId(), thread.getName());
+//        pw.printf("Main : Priority:  %d\n", thread.getPriority());
+//        pw.printf("Main : Old State: %s\n", state);
+//        pw.printf("Main : New State: %s\n", thread.getState());
+//        pw.printf("Main : ************************************\n");
+        System.out.println(thread.getId()+",name="+thread.getName()+",priority="+thread.getPriority()+",old="+state+"->"+thread.getState());
     }
 }

@@ -4,7 +4,7 @@ import com.concurrency.task.PrimeGenerator;
 
 import java.util.concurrent.TimeUnit;
 
-public class Main {
+public class Main4 {
     public static void main(String[] args) {
 
         Thread task = new PrimeGenerator();

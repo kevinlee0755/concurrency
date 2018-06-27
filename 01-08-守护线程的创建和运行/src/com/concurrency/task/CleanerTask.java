@@ -28,11 +28,16 @@ public class CleanerTask extends Thread {
 
     @Override
     public void run() {
+    	System.out.println("running cleaner");
         while (true) {
             Date date = new Date();
             clean(date);
+            
+            //System.out.println("loop");
         }
     }
+    
+    
 
     /**
      * 清除方法，生存时间长于10秒的事件进行清除
@@ -42,19 +47,24 @@ public class CleanerTask extends Thread {
         long difference;
         boolean delete;
 
+//        System.out.println("queue size:"+this.deque.size());
         if (this.deque.size() == 0) {
             return;
         }
 
         delete = false;
         do {
-            Event e = this.deque.getLast();
-            difference = date.getTime() - e.getDate().getTime(); // 计算最早的事件距离现在的时间
-            if (difference > 10000) {  // 大于10秒就输出信息，并且删除最先发生的事件
-                System.out.printf("Cleaner: %s\n", e.getEvent());
-                deque.removeLast();
-                delete = true;
-            }
+        	try{
+        		Event e = this.deque.getLast();
+                difference = date.getTime() - e.getDate().getTime(); // 计算最早的事件距离现在的时间
+                if (difference > 10000) {  // 大于10秒就输出信息，并且删除最先发生的事件
+                    System.out.printf("Cleaner: %s\n", e.getEvent());
+                    deque.removeLast();
+                    delete = true;
+                }
+        	}catch(Exception e){
+        		break;
+        	}
         } while (difference > 10000);
 
         if (delete) { // 有删除就输出删除后队列的大小

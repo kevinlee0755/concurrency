@@ -5,7 +5,7 @@ import com.concurrency.task.SearchTask;
 
 import java.util.concurrent.TimeUnit;
 
-public class Main {
+public class Main11 {
     public static void main(String[] args) {
 
         // 创建一个线程组
@@ -34,7 +34,7 @@ public class Main {
         Thread[] threads = new Thread[threadGroup.activeCount()]; // 返回此线程组中活动线程的估计数。
         threadGroup.enumerate(threads); // 把此线程组及其子组中的所有活动线程复制到指定数组中。
         for (int i = 0; i < threadGroup.activeCount(); i++) {
-            System.out.printf("Thread %s: %s\n", threads[i].getName(), threads[i].getState());
+            System.out.printf("Thread state %s: %s\n", threads[i].getName(), threads[i].getState());
         }
 
         // 等待线程结束
