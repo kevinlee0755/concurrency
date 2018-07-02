@@ -1,11 +1,11 @@
 package com.concurrency.core;
 
-import com.concurrency.task.Consumer;
-import com.concurrency.task.Producer;
+import com.concurrency.task.Consumer8;
+import com.concurrency.task.Producer8;
 import com.concurrency.utils.Buffer;
 import com.concurrency.utils.FileMock;
 
-public class Main {
+public class Main208 {
     public static void main(String[] args) {
         // 创建一个文件模拟对象，它有101行
         FileMock mock = new FileMock(101, 10);
@@ -14,15 +14,15 @@ public class Main {
         Buffer buffer = new Buffer(20);
 
         // 创建一个生产者对象，并且让它在一个单独的线程中运行
-        Producer producer = new Producer(mock, buffer);
+        Producer8 producer = new Producer8(mock, buffer);
         Thread threadProducer = new Thread(producer, "Producer");
 
         // 创建三个消费者对象，并且个他们分别在不同的线程中运行
-        Consumer consumers[] = new Consumer[3];
+        Consumer8 consumers[] = new Consumer8[3];
         Thread threadConsumers[] = new Thread[3];
 
         for (int i = 0; i < 3; i++) {
-            consumers[i] = new Consumer(buffer);
+            consumers[i] = new Consumer8(buffer);
             threadConsumers[i] = new Thread(consumers[i], "Consumer " + i);
         }
 

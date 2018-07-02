@@ -6,11 +6,11 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 打印队列类，模拟一个打印队列事件
  */
-public class PrintQueue {
+public class PrintQueue1 {
     /**
      * 用于控制队列访问的锁，使用公平锁
      */
-    private final Lock queueLock = new ReentrantLock(false);
+    private final Lock queueLock = new ReentrantLock(true);
 
     /**
      * 打印一个文档

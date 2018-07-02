@@ -2,7 +2,7 @@ package com.concurrency.task;
 
 import java.util.Random;
 
-public class Task implements Runnable {
+public class Task3 implements Runnable {
     @Override
     public void run() {
         int result;

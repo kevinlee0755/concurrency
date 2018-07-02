@@ -48,7 +48,7 @@ public class FileMock {
      */
     public String getLine() {
         if (this.hasMoreLines()) {
-            System.out.println("Mock: " + (this.content.length - this.index));
+            System.out.println("get Mock: " + (this.content.length - this.index));
             return this.content[this.index++];
         }
         return null;

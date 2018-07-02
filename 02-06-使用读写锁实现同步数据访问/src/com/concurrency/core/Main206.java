@@ -4,7 +4,7 @@ import com.concurrency.task.PricesInfo;
 import com.concurrency.task.Reader;
 import com.concurrency.task.Writer;
 
-public class Main {
+public class Main206 {
     public static void main(String[] args) {
         // 创建价格信息对象，用于存储价格
         PricesInfo pricesInfo = new PricesInfo();

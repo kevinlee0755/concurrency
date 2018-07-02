@@ -4,7 +4,7 @@ import com.concurrency.task.Consumer;
 import com.concurrency.task.EventStorage;
 import com.concurrency.task.Producer;
 
-public class Main {
+public class Main204 {
     public static void main(String[] args) {
         // 创建一个事件存储对象
         EventStorage storage = new EventStorage();

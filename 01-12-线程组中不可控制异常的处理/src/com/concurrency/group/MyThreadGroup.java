@@ -21,7 +21,7 @@ public class MyThreadGroup extends ThreadGroup {
         // 打印线程的名称
         System.out.printf("The thread %s has thrown an Exception\n", t.getId());
         // 输出异常栈信息
-        e.printStackTrace(System.out);
+        //e.printStackTrace(System.out);
         // 中断线程组中其余的线程
         System.out.printf("Terminating the rest of the Threads\n");
         interrupt();

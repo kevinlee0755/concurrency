@@ -1,17 +1,17 @@
 package com.concurrency.task;
 
-public class Job implements Runnable {
+public class Job3 implements Runnable {
     /**
      * 打印队列对象
      */
-    private PrintQueue printQueue;
+    private PrintQueue3 printQueue;
 
     /**
      * 构造函数，初始化打印队列对象
      *
      * @param printQueue 打印队列对象
      */
-    public Job(PrintQueue printQueue) {
+    public Job3(PrintQueue3 printQueue) {
         this.printQueue = printQueue;
     }
 

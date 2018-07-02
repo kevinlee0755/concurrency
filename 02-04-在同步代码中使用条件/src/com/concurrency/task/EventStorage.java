@@ -32,6 +32,7 @@ public class EventStorage {
     public synchronized void set() {
         while (this.storage.size() == this.maxSize) {  // 如果集合已经满了，就等待
             try {
+            	System.out.println("wait consumer");
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -49,6 +50,7 @@ public class EventStorage {
     public synchronized void get() {
         while (this.storage.size() == 0) { // 如果集合为空就等待
             try {
+            	System.out.println("wait product");
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();

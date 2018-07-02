@@ -78,6 +78,8 @@ public class Buffer {
                 line = this.buffer.poll();
                 System.out.printf("%s: Line Readed: %d\n", Thread.currentThread().getName(), this.buffer.size());
                 this.space.signalAll();
+            }else{
+            	System.out.println("stop pend===================================");
             }
 
         } catch (InterruptedException e) {
@@ -95,6 +97,7 @@ public class Buffer {
      * @param pendingLines true追加，false不追加
      */
     public void setPendingLines(boolean pendingLines) {
+    	System.out.println("panding end !!!!!!!!!!!!!!!!!!!!!!!!");
         this.pendingLines = pendingLines;
     }
 

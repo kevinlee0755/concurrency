@@ -3,7 +3,7 @@ package com.concurrency.task;
 import com.concurrency.utils.Buffer;
 import com.concurrency.utils.FileMock;
 
-public class Producer implements Runnable {
+public class Producer8 implements Runnable {
     /**
      * 文件模拟对象
      */
@@ -19,7 +19,7 @@ public class Producer implements Runnable {
      * @param mock   文件模拟对象
      * @param buffer 缓冲对象
      */
-    public Producer(FileMock mock, Buffer buffer) {
+    public Producer8(FileMock mock, Buffer buffer) {
         this.mock = mock;
         this.buffer = buffer;
     }

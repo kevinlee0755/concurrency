@@ -7,7 +7,7 @@ import com.concurrency.utils.Results;
 
 import java.util.concurrent.CyclicBarrier;
 
-public class Main {
+public class Main305 {
     public static void main(String[] args) {
 
         final int ROWS = 10000; // 矩阵的行数

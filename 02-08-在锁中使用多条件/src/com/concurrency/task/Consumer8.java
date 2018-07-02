@@ -4,7 +4,7 @@ import com.concurrency.utils.Buffer;
 
 import java.util.Random;
 
-public class Consumer implements Runnable {
+public class Consumer8 implements Runnable {
     /**
      * 缓冲对象
      */
@@ -15,7 +15,7 @@ public class Consumer implements Runnable {
      *
      * @param buffer 缓冲对象
      */
-    public Consumer(Buffer buffer) {
+    public Consumer8(Buffer buffer) {
         this.buffer = buffer;
     }
 

@@ -34,8 +34,11 @@ public class PricesInfo {
      */
     public double getPrice1() {
         lock.readLock().lock();
+        System.out.println("read start");
+        
         double value = price1;
         lock.readLock().unlock();
+        System.out.println("read end");
         return value;
     }
 
@@ -59,6 +62,12 @@ public class PricesInfo {
      */
     public void setPrices(double price1, double price2) {
         lock.writeLock().lock();
+        System.out.println("start locking writing");
+        try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
         this.price1 = price1;
         this.price2 = price2;
         lock.writeLock().unlock();

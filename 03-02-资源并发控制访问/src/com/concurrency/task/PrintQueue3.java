@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 打印队列类，使用信号量来控制打钱作业的访问
  */
-public class PrintQueue {
+public class PrintQueue3 {
     /**
      * 信号量，控制队列的访问
      */
@@ -17,7 +17,7 @@ public class PrintQueue {
     /**
      * 构造函数，初始化信号量
      */
-    public PrintQueue() {
+    public PrintQueue3() {
         semaphore = new Semaphore(1);
     }
 
